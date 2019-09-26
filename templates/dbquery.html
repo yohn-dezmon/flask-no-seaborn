@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block title %}
+dbquery - GDELT Education
+{% endblock %}
+  {% block content %}
+
+
+        <div class="left_side_div">
+          <div>
+
+
+        <h1 class="box_head_left"> {{ query_result.A }} </h1>
+      </div>
+      <div class="first_articles">
+        {% for actor in query_result %}
+        <article>
+          <div class ="added">
+            {{ actor.Actor2Name }}
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+
+{% endblock %}

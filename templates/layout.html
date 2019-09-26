@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="static/styles.css">
+    <title>
+      {% block title %}
+
+      {% endblock %}
+    </title>
+  </head>
+  <body>
+      <main>
+        <header>
+        <h1>GDELT Education Project</h1>
+        <div class="header-buttons">
+        <!-- since the list is right-floated it displays backwards -->
+        <ul>
+          <li><a href="/contact"> Contact </a>
+          <li><a href="/GDELT-details"> GDELT Details </a>
+          <li><a href="https://github.com/yohn-dezmon/education-gdelt"> Source Code </a>
+          <li><a href="/"> Home </a>
+
+        </ul>
+      </div>
+      </header>
+      {% block content %}
+      {% endblock %}
+
+      {% block links %}
+
+      <div class="links">
+        <div class="bottom-div">
+        <ul class="bottom-links">
+          <li><a href="essa">Every Student Succeeds Act</a></li>
+          <li><a href="curriculum">Curriculum in the US</a></li>
+          <li><a href="common-core">Common Core</a></li>
+          <li><a href="charter-schools">Charter Schools </a></li>
+          <li><a href="assessment">Assessments </a></li>
+      </ul>
+      </div>
+    </div>
+      {% endblock %}
+
+
+    </main>
+
+    </body>
+    </html>

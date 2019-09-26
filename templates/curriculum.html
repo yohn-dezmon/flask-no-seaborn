@@ -1,0 +1,117 @@
+{% extends "layout.html" %}
+{% block title %}
+Curriculum - GDELT Education
+{% endblock %}
+  {% block content %}
+  <div class="centered">
+    <h2 class="subcategory-header"> Keyword: Curriculum </h2>
+
+  <img src="static/curriStateMentionCount.png" class="subcat-img">
+  <div class="topic-intro caption">
+    <p> This graph shows the amount of articles containing the keyword curriculum in their titles
+       that were associated with a given state. California, Texas, Massachusetts and New York
+      were the states associated with the greatest number of articles concerning
+      curriculum; potentially suggesting controversy or perhaps reform. To find out
+      why these states were high in events regarding curriculum, I querired the
+      dataset for the articles with the highest number of mentions and the results
+      can be found below.
+    </p>
+  </div>
+
+  <!-- CA -->
+  <div class="graph-table">
+    <!-- <div class="curri-avgtone"> -->
+
+    <img class="avgtone_dist" src='static/ca_avgtone_curri_topstates.png'>
+
+  </div>
+  <div class="graph-table">
+    <div class="CATable">
+      {{ CA_html_table|safe }}
+    </div>
+  </div>
+<div class="topic-intro caption">
+  <p> The graph on the left displays a histogram of the distribution of average tone
+    of curriculum articles that were reported within California. The majority of the
+    articles appear to have been slighly above 0, indicating a neutral or positive overall
+    tone. On the right are the URLs which had the greatest number of mentions.
+  </p>
+  <p> Looking at the URL paths from the table, we can glean that in general the
+    articles covering curriculum in California are concerned with increasing computer science,
+    reforming sexual education, incorporating LGBQT topics into curriculum, as well as
+    expanding racial history/topics within both k-12 and university curriculums.
+    </p>
+</div>
+
+
+<!-- TX -->
+<div class="graph-table">
+
+  <img class="avgtone_dist" src='static/tx_avgtone_curri_topstates.png'>
+
+</div>
+<div class="graph-table">
+  <div class="CATable">
+    {{ TX_html_table|safe }}
+  </div>
+</div>
+<div class="topic-intro caption">
+<p> Texas' Average Tone Distribution also hovers around 0, however the distribution
+  does tilt a bit to the left of 0 indicating that there may have been more controversial
+  content reported within Texas. Indeed, looking at the table, we see that one of the
+  most mentioned articles is a feature reporting the elimination of Helen Keller and
+  Hillary clinton from Texas schools' history curriculum.
+</p>
+</div>
+
+<!-- MA -->
+<div class="graph-table">
+  <!-- <div class="curri-avgtone"> -->
+
+  <img class="avgtone_dist" src='static/ma_avgtone_curri_topstates.png'>
+
+</div>
+<div class="graph-table">
+  <div class="CATable">
+    {{ MA_html_table|safe }}
+  </div>
+</div>
+<div class="topic-intro caption">
+<p> Masachusetts' distribution shifts back to the right, indicating an overall
+  more positive tone. The most mentioned articles involving Massachusetts include
+  articles discussing expanding curriculums to include improved foreign language
+  courses, criticism of a college program focussed on social justice, reforms
+  for math and science curriculum, and also a discussion of sexual education.
+</p>
+</div>
+
+<!-- NY -->
+<div class="graph-table">
+  <!-- <div class="curri-avgtone"> -->
+
+  <img class="avgtone_dist" src='static/ny_avgtone_curri_topstates.png'>
+
+</div>
+<div class="graph-table">
+  <div class="CATable">
+    {{ NY_html_table|safe }}
+  </div>
+</div>
+<div class="topic-intro caption">
+<p> New York's most popular articles cover topics including curriculum to prevent
+  sexual harrassment, higher education curriculums including cannabis in their
+  curriculums, and several articles where I accidentally captured the spanish
+  word 'curriculum' in which translates to resume in english. In future models
+  I would like to use Natural Language Processing to filter out articles with
+  titles from other languages and to be able to summarize articles using their
+  URLs.
+</p>
+</div>
+
+
+
+
+
+
+</div>
+  {% endblock %}

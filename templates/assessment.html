@@ -1,0 +1,115 @@
+{% extends "layout.html" %}
+{% block title %}
+Assessment - GDELT Education
+{% endblock %}
+  {% block content %}
+  <div class="centered">
+    <h2 class="subcategory-header"> Keyword: Assessment </h2>
+  <img src='static/count_assessment_US.png' class="subcat-img">
+  <div class="topic-intro caption">
+    <p> This graph shows the actors involved in articles mentioning 'assessment'
+      in their titles. Considering that under the current laws regarding education
+      in the United States, the federal government is responsible for reviewing
+      the assessments that are given at the state level it is not suprising to see
+      that United States and the Department of Education are some of the most mentioned actors.
+      To get a better idea
+      of why these actors were involved with assessments in the United States, and
+      how the articles depicted assessments, I chose to look
+      at the average tone of the articles grouped by actors.
+    </p>
+  </div>
+  <img src='static/avgtone_assessment_US.png' class="subcat-img">
+  <div class="topic-intro caption">
+    <p> Here each bar represents the average tone for all of the articles involving a particular actor from
+      the top 15 actors above. I chose to exclude the actors 'College',
+      'University', and 'Professor' as I was more interested in the assessments being
+      given at the K-12 level in the United States educational system. The actors who had the most mentions from this
+      sample of actors like School and United States have nearly neutral tones, suggesting
+      that there is likely a great share of criticism and praise of assessments in
+      the United States media. To further describe the media being presented on the topic
+      of assessments in the US, I decided to look at the URLs of articles from the
+      positive, neutral and negative portions of this graph.
+    </p>
+  </div>
+  <div class="pre-tables">
+    <h2> Positive Average Tone Actors </h2>
+
+    <div class="Table-Header">
+    <h2> Maine </h2>
+
+      <p> <b style="color: hotpink;">Highlight:</b> The Maine Department of Education released a template for the
+        Maine schools to report their Comprehensive Needs Assessments (CNA).
+        The CNAs are how the schools receive federal funds.
+        The template's purpose is to prevent the duplication of work and reporting
+        to the Maine Department of Education.</p>
+
+        <p> <b> Click the links below to see why articles including Maine
+        resulted in an overall positive Average Tone. </b></p>
+    </div>
+    <div class="Table-Header">
+    <h2> Student </h2>
+
+    <p> <b style="color: hotpink;">Highlight:</b> The Alaska Department of Education
+      announced they will be purchasing student assessments from the Data Recognition
+      Corporation. Previously they were using the Alaska Measures Progress test which
+      "was plagued by technical issues, which interrupted testing and delayed results".
+    </p>
+
+      <p> <b> Click the links below to see why articles including students
+        resulted in an overall positive Average Tone. </b></p>
+    </div>
+
+  <div class="ASSESSTable">
+  {{ maine_html_table|safe }}
+  </div>
+
+  <div class="ASSESSTable">
+    {{ student_html_table|safe }}
+  </div>
+  </div>
+
+
+<div class="pre-tables">
+  <h2> Neutral & Negative Average Tone Actors </h2>
+
+  <div class="Table-Header US">
+  <h2> United States </h2>
+
+  <p> <b style="color: hotpink;">Highlight:</b> An assessment system called i-Ready
+    created by Curriculum Associates targets advanced & gifted students.
+    The i-Ready system is apparently incompatible with iPads and has poor Mac support
+    (2017-2018). The i-Ready assessment system has been criticized for its lack of
+    detail in the reports it gives teachers (i.e. not showing the specific
+    problems that students got wrong)
+    (https://mathexchanges.wordpress.com/2018/06/14/why-iready-is-dangerous/).
+  </p>
+
+    <p> <b> Click the links below to see why articles including the United States
+      resulted in an overall neutral Average Tone. </b></p>
+
+  </div>
+  <div class="Table-Header">
+  <h2> Florida </h2>
+
+  <p> <b style="color: hotpink;">Highlight:</b> Here the keyword 'assessment'
+    captured a different aspect of US education, that of violence and 'threat assessment'.
+    Gun violence is a serious issue in the United States, and the overall negative tone
+    associated with assessment in Florida reflects the tragedy of the 2018 Stoneman Douglas
+    High School Shooting.
+  </p>
+
+    <p> <b> Click the links below to see why articles including Florida
+      resulted in an overall negative Average Tone. </b></p>
+
+  </div>
+
+  <div class="ASSESSTable">
+  {{ US_html_table|safe }}
+  </div>
+
+  <div class="ASSESSTable FLR" >
+  {{ FL_html_table|safe }}
+  </div>
+  </div>
+  </div>
+  {% endblock %}

@@ -1,0 +1,116 @@
+{% extends "layout.html" %}
+{% block title %}
+Charter Schools - GDELT Education
+{% endblock %}
+  {% block content %}
+  <div class="centered">
+    <h2 class="subcategory-header"> Key-Phrase: Charter Schools </h2>
+
+    <div class="topic-intro caption">
+    <p> Charter schools are a topic of great discussion in the United States, and this is reflected
+      in the data collected from the GDELT dataset. Charter schools are a relatively new phenomenon
+      within the United States educational sector, as Minnesota passed the first <a href="https://www.leg.state.mn.us/lrl/guides/guides?issue=charter">
+      charter school law</a> in the United States in 2001. The charter schools operate under a contract
+      with an <b>authorizer</b>: which can be a state, district, or other entity. So long as the charter
+      school adheres to the <b>charter</b>, they are often exempt from other laws and regulations
+      affecting the majority of public schools.
+      A charter school receives public funds,
+      but is not supervised by the state but rather a board of directors.
+    </div>
+
+
+    <img src='static/keyword_count.png' class="subcat-img">
+
+    <div class="topic-intro caption">
+    <p> This graph displays the occurence of selected keywords within US media article titles
+      from April 1, 2013 to present. Although the GDELT dataset extends to 2005, the SOURCEURL field
+      was not included until April 1, 2013, and this field was used to find the keywords within
+      the titles of the articles.
+      The key-phrase 'Charter Schools' appeared more than any other phrase/keyword with 57,985 occurences.
+      I was surprised that it was mentioned so much more than any other topic, so I decided
+      to look at the number of mentions and average tone to further understand its representation
+      within the media.
+    </p>
+    </div>
+
+
+    <img src="static/charter_schools_avg_nummen_runavg.png" class="subcat-img wide">
+
+    <div class="topic-intro caption">
+    <p> This graph displays the running averages, starting in 2014, of the average tone and number of mentions
+      of articles mentioning charter schools in their titles. With the average tone of the articles on the left Y axis
+      and the number of mentions on the right Y axis,
+      this graph displays several interesting patterns. Firstly, as the running averages are calibrating,
+      there are two inverse peaks and troughs
+      between the number of mentions and average tone of the articles. The first of these inverse
+      peaks occurs in early 2014, and the other in early 2015. Another interesting pattern is that
+      since 2015, both the number of mentions of charter schools and the average tone steadily decline
+      up until the present.
+    </p>
+    <p> All three of these patterns suggest a slightly negative portrayal of charter schools in
+      the US media considering that when the average tone peaked (i.e. positive articles involving charter schools),
+       the number of mentions of the articles reached a trough and when the average tone dipped,
+       the number of mentions reached its highest peak since 2014. However, I wanted to further
+       investigate what is being said about Charter Schools, so I decided to look at the most
+       mentioned articles from these three periods.
+    </p>
+    </div>
+    <h2 class="subcategory-header"> 2014 Inverse Peaks  </h2>
+    <div class="CATable">
+      {{ top_20_20142015|safe }}
+    </div>
+
+    <div class="topic-intro caption">
+    <p> The URLs in the above table are all from 2014 and are sorted by number of mentions
+       in descending order. From the initial peak in number of mentions and dip in average tone in 2014,
+      we see a mixture of topics emerging that involve charter schools. While some articles
+      mention the suspension or deceleration of charter schools within certain communities,
+      other articles note the successes the charter schools have achieved, and their potential
+      positive outlook. <a href="http://waliberals.org/why-bob-ferguson-randy-dorn-are-wrong-to-support-charter-schools/2015/09/26/">One article</a> that strongly disagrees with charter schools in the state
+      of Washington argues that schools should not be run like businesses, and that the charter school
+      system is easily exploited by the richest people within a state.
+    </p>
+    </div>
+
+    <h2 class="subcategory-header"> 2015 Inverse Peaks  </h2>
+    <div class="CATable">
+    {{ top_20_20152016|safe }}
+    </div>
+
+    <div class="topic-intro caption">
+    <p> The URLs in the above table are all from the 2015 peak in average tone, and are sorted
+      in descending order by their average tones. While these
+      articles show the positive representation of charter schools within US media, since they
+      correlate with a dip in the number of mentions they can be interpreted as being less important
+      to US media readers. <a href="http://www.abqjournal.com/576014/news/charter-schools-in-nm-thriving.html">One article</a> explains what the authors see as the advantages of charter schools, namely that
+      smaller class sizes provide education that is more individualized than public schools, and that
+      charter schools are held not only to the standards that public schools are held to,
+      but also the goals set by their <b>authorizers</b>. Authorizers can be state agencies, school districts,
+      or universities, and they have the ability to shut down charter schools that do not meet the
+      terms of their contracts. This sentiment that charter schools
+      have the ability to provide better education is mirrored in the positive articles from 2014 as well.
+    </p>
+    </div>
+
+
+    <h2 class="subcategory-header"> Recent Decline in Average Tone and Number of Mentions </h2>
+    <div class="CATable">
+    {{ top_20_2017pres|safe }}
+    </div>
+
+    <div class="topic-intro caption">
+    <p> To get a look at what is being said about charter schools in more recent times,
+      this table of URLs is a collection of the most mentioned articles from 2018-2019 sorted
+      in descending order by number of mentions. <a href="https://www.wfmz.com/news/ap-top-stories/more-democrat-governors-more-skepticism-of-charter-schools/914973116">An article</a> from a local Pennsylvania and
+      western New Jersey television station, WFMZ, sites the success of a Michigan governor's
+      election to office to her criticism of the DeVos' pro-charter school agenda. Michigan is the home State of
+      Betsy Devos, President Trump's Secretary of Education.
+    </p>
+    <p> In 2015, Alabama passed a bill that allowed for public charter schools to exist within the state.
+
+    </p>
+    </div>
+
+
+  </div>
+  {% endblock %}

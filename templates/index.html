@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block title %}
+Home - GDELT Education
+{% endblock %}
+  {% block content %}
+      <div class="Intro">
+      <h2>Project Background</h2>
+      <p> The Global Database of Events, Language, and Tone (GDELT) captures news
+      articles from around the world and stores them in a database that can
+      currently be accessed by the public using Google Cloud Services or
+      Amazon Web Services. <a href="/GDELT-details"> Please click here for an explanation of the details
+      of the dataset and how it was used in this project.</a></p>
+        <p> I filtered the dataset for topics related to education in order to
+         perform an exploratory analysis of how educational topics are covered
+         within the US media. Some of the questions I was interested in answering
+         include:
+         which states have the greatest media coverage of educational topics,
+         how are laws regarding education received by the public,
+         what is the relative occurence of educational buzzwords in US media, amongst others.
+         To see the data visualizations that answer these questions, please
+         select a sub-category below!</p>
+
+      </div>
+
+      <div class="Collage">
+        <h2>Data Flow Diagram</h2>
+        <img class="collage-img" src="static/GDELTDataDiagramv4.png">
+        <!-- <img src={{ url }} class="collage-img"> -->
+
+      </div>
+
+
+    {% endblock %}
