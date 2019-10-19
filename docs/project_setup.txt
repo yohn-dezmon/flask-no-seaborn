@@ -1,0 +1,13 @@
+This repository is the code for the web interface of my first Data Engineering project
+(GDELT-education).
+I had to make a separate repository b/c this code is refactored from the original
+code I wrote for a Flask web interface that utilized the seaborn library, whereas
+for the website I'm using to host this website (pythonanwhere), importing the library
+took up too much space.
+The actual code used to create the flask app is here:
+https://www.pythonanywhere.com/user/yohndezmon/files/home/yohndezmon/flask-no-seaborn
+but I wanted to keep a git repository to keep versions of the code that I'm using there.
+Anything that I change here must also be changed in the pythonanywhere repository located
+at the link above.
+
+-jd
