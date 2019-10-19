@@ -6,7 +6,15 @@ import numpy as np
 from io import BytesIO
 import matplotlib.pyplot as plt
 import pdb
+import sys
+import os
 
+# /Users/HomeFolder/projects/border-crossing-analysis-master/src
+absPath = os.path.abspath(__file__)
+# /Users/HomeFolder/projects/border-crossing-analysis-master
+srcPath = os.path.dirname(absPath)
+# /Users/HomeFolder/projects/border-crossing-analysis-master/input/
+parentPath = os.path.dirname(srcPath)
 
 class Graph(object):
     """ A class to house all of the code responsible for creating

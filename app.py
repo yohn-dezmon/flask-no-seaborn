@@ -91,10 +91,10 @@ def curri_page():
     #                         TX_distplot=TX_distplot,
     #                         MA_distplot=MA_distplot,
     #                         NY_distplot=NY_distplot,
-    #                         CA_html_table=CA_html_table,
-    #                         TX_html_table=TX_html_table,
-    #                         MA_html_table=MA_html_table,
-    #                         NY_html_table=NY_html_table
+                            CA_html_table=CA_html_table,
+                            TX_html_table=TX_html_table,
+                            MA_html_table=MA_html_table,
+                            NY_html_table=NY_html_table
                             )
 
 @app.route('/charter-schools', methods=['GET'])
@@ -111,20 +111,20 @@ def charter_schools_page():
     # top10_us_url = graph.buzzwords_graph("keyword_count")
 
     # I used the highest number of mentions from 2014-2015 to create this table
-    # top_20_20142015 = graph.table_generator("charter_schools_20142015", "charter-school")
+    top_20_20142015 = graph.table_generator("charter_schools_20142015", "charter-school")
 
     # I used the lowest number of mentions from 2014-2015 to create this table
-    # top_20_20152016 = graph.table_generator("charter_schools_20152016", "charter-school")
+    top_20_20152016 = graph.table_generator("charter_schools_20152016", "charter-school")
 
     # I used the lowest number of mentions from 2014-2015 to create this table
-    # top_20_2017pres = graph.table_generator("charter_schools_2017pres", "charter-school")
+    top_20_2017pres = graph.table_generator("charter_schools_2017pres", "charter-school")
 
     return render_template('charter-schools.html',
                             # top10_us_url=top10_us_url,
                             # # lineplot_url=lineplot_url,
-                            # top_20_20142015=top_20_20142015,
-                            # top_20_20152016=top_20_20152016,
-                            # top_20_2017pres=top_20_2017pres
+                            top_20_20142015=top_20_20142015,
+                            top_20_20152016=top_20_20152016,
+                            top_20_2017pres=top_20_2017pres
                             )
 
 @app.route('/essa', methods=['GET'])
